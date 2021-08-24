@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<link rel="stylesheet" href="styles.css">
+<title> Tailor Shop </title>
+</head>
+<body>
+<div class="header">
+  <h1>J FIX TAILORS</h1>
+</div>
+
+<div class="topnav">
+  <a  onclick="drop()">Order</a>
+  <a onclick="managedrop()">Update</a>
+  <a href="customers.php">Customers list</a>
+  <a href="addexpense.php">Add Expenses</a>
+  <a href="viewexpenses.php">View Expenses</a>
+  <a  href="index.php" style="float:right">Logout</a>
+  
+</div>
+<div class="topnav" id="container"  >
+  <a href="add.php"> New Customer</a>
+  <a href="order.php">Existing Customer</a>
+</div>
+<div class="topnav" id="managecontainer"  >
+  <a href="updatestatus.php">Update Status</a>
+  <a href="updateinfo.php">Customer Info</a>
+</div>
+<br/>
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <img src="img1.jpg" ">
+</div>
+
+<div class = "mySlides fade">
+  <img src="img2.jpg">
+</div>
+
+<div class="mySlides fade">
+  <img src="img3.jpg" >
+</div>
+
+<div class="mySlides fade">
+  <img src="img4.jpg" >
+</div>
+
+<div class="mySlides fade">
+  <img src="img5.jpg" >
+</div>
+</div>
+</div>
+</div>
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span>
+</div>
+
+<script language="javascript"> 
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) 
+  {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length)
+  {
+    slideIndex = 1
+  }    
+  for (i = 0; i < dots.length; i++)
+  {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 4000); // Change image every 2 seconds
+}
+
+function drop() {
+  var v=document.getElementById("container");
+  if(v.style.visibility=="visible"){
+    v.style.visibility="hidden";
+  }
+  else{
+    v.style.visibility="visible";
+  }
+}
+function managedrop(){
+    var m=document.getElementById("managecontainer");
+    if(m.style.visibility=="visible"){
+    m.style.visibility="hidden";
+  }
+  else{
+    m.style.visibility="visible";
+  }
+  }
+
+
+</script>
+</div>
+
+<div class="footer">
+  <h1>J FIX <br>
+  THE PERFECT FIT</h1>
+</div>
+</html>
