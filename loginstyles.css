@@ -1,0 +1,94 @@
+.header {
+  margin-top:20px;
+  padding: 10px;
+  opacity:0.7;
+  text-align: center;
+  background: #ebebe0;
+  width:40%;
+  border-radius:15px;
+}
+
+.header h1 {
+  font-size: 30px;
+}
+
+h3{
+  color:black;
+  background-color:red;
+  position:absolute;
+  left:530px;
+  top:115px;
+  width:20%;
+  opacity:0.7;
+  border: 3px solid darkred;
+  border-radius:15px;  
+  text-align:center;
+  box-align:center;
+  text-size:50px;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image:url("bg.jpg");
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+
+
+form {
+background: #ebebe0;
+border: 3px solid #f1f1f1;
+border-radius:15px;
+width:380px;
+height:380px;
+margin-top:50px;
+opacity:0.7;
+}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  color: #bfbfbf;
+  margin: 8px 0;
+  background-color: #000;
+  display: inline-block;
+  border: 2px solid  #bfbfbf;
+  box-sizing: border-box;
+}
+
+
+button {
+  background-color: lawngreen;
+  color:black;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  color:white;
+opacity:0.8;
+  border: 2px solid green;
+}
+
+.imgcontainer {
+  text-align: center; 
+  padding-bottom:5px;
+}
+
+img{
+  width: 25%;
+  height:25%;
+  border-radius: 30%;
+}
+
+.container {
+	
+  padding-left: 10px;
+  padding-right:10px;
+}
+
+
+
