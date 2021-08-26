@@ -78,13 +78,13 @@ include_once "connect.php";
       <span class="checkmark"></span>
     </label>
     <button class="b1" name="ok" onclick="check()">OK</button>
-    <input id="shirt1"  type="number" placeholder="chest" name="chest" required>
-    <input id="shirt2" type="number" placeholder="shoulder" name="shoulder"  required>
-    <input id="shirt3" type="number" placeholder="Shirt Quantity" name="squantity" required>
-    <input id="pant1" type="number" placeholder="Waist" name="waist"  required>
-    <input id="pant2" type="number" placeholder="Height" name="height"  required>	
-    <input id="pant3" type="number" placeholder="Pant Quantity" name="pquantity"  required> 
-    <input id="amount" type="number" placeholder="Amount" name="amt" required>
+    <input id="shirt1"  type="number" min="0" placeholder="chest" name="chest" required>
+    <input id="shirt2" type="number" min="0" placeholder="shoulder" name="shoulder"  required>
+    <input id="shirt3" type="number" min="0" placeholder="Shirt Quantity" name="squantity" required>
+    <input id="pant1" type="number" min="0" placeholder="Waist" name="waist"  required>
+    <input id="pant2" type="number" min="0" placeholder="Height" name="height"  required>	
+    <input id="pant3" type="number" min="0" placeholder="Pant Quantity" name="pquantity"  required> 
+    <input id="amount" type="number" min="0" placeholder="Amount" name="amt" required>
     <input id="delivdate" type="date" placeholder="Expeceted Delivery" name="ddate" required>
     <div class="container2">
   <input id="d" type="text" name="dressname"value="" ></input>
