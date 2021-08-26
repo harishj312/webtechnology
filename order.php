@@ -71,16 +71,16 @@
     <button class="b1" name="ok" onclick="check()">OK</button>
     <br/>
     <label style="top:323px;" id="lbl1">CHEST </label>
-    <input style="float:right;width:60%" id="shirt1"  type="number" placeholder="chest" name="chest" value="<?php echo $row['chest']?>" required>
+    <input style="float:right;width:60%" id="shirt1"  type="number" min="0" placeholder="chest" name="chest" value="<?php echo $row['chest']?>" required>
     <label style="top:383px;" id="lbl2">SHOULDER </label>
-    <input style="float:right;width:60%" id="shirt2" type="number" placeholder="shoulder" name="shoulder"  value="<?php echo $row['shoulder']?>" required>
-    <input id="shirt3" type="number" placeholder="Shirt Quantity" name="squantity" required>
+    <input style="float:right;width:60%" id="shirt2" type="number" min="0" placeholder="shoulder" name="shoulder"  value="<?php echo $row['shoulder']?>" required>
+    <input id="shirt3" type="number" placeholder="Shirt Quantity" min="0" name="squantity" required>
     <label style="top:500px;" id="lbl3">WAIST </label>
-    <input style="float:right;width:60%" id="pant1" type="number" placeholder="Waist" name="waist"  value="<?php echo $row['waist']?>" required>
+    <input style="float:right;width:60%" id="pant1" type="number" min="0" placeholder="Waist" name="waist"  value="<?php echo $row['waist']?>" required>
     <label style="top:560px;" id="lbl4">HEIGHT</label>
-    <input style="float:right;width:60%" id="pant2" type="number" placeholder="Height" name="height"  value="<?php echo $row['height']?>" required>	
-    <input id="pant3" type="number" placeholder="Pant Quantity" name="pquantity"  required> 
-    <input id="amount" type="number" placeholder="Amount" name="amt" required>
+    <input style="float:right;width:60%" id="pant2" type="number" min="0"  placeholder="Height" name="height"  value="<?php echo $row['height']?>" required>	
+    <input id="pant3" type="number" placeholder="Pant Quantity" min="0"  name="pquantity"  required> 
+    <input id="amount" type="number" min="0"  placeholder="Amount"  name="amt" required>
     <input id="delivdate" type="date" placeholder="Expeceted Delivery" name="ddate" required>
     <div class="container2">
   <input id="d" type="text" name="dressname"value="" ></input>
