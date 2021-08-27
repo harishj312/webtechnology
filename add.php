@@ -66,7 +66,7 @@ include_once "connect.php";
     <input type="text" placeholder="Name" name="name" required>
     <input type="text" placeholder="Address" name="address" required>
     <input type="number" placeholder="Contact Number" name="cno" required>
-    <input type="text" placeholder="Email" name="email" required>
+    <input type="email" placeholder="Email" name="email" required>
     <br/>
     <p> Select Dress Type</p>
     <label class="container1">Shirt
