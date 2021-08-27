@@ -5,7 +5,6 @@ include_once "connect.php";
     $Address=$_POST['address'];
     $Mobile=$_POST['cno'];
     $Email=$_POST['email'];
-    $Amount=$_POST['amt'];
     $Date=$_POST['ddate'];
     $Chest=$_POST['chest'];
     $Shoulder=$_POST['shoulder'];
@@ -14,6 +13,7 @@ include_once "connect.php";
     $Height=$_POST['height'];
     $PantQuantity=$_POST['pquantity'];
     $Dress=$_POST['dressname'];
+    $Amount=($ShirtQuantity*300)+($PantQuantity*350);
     $sql1= "INSERT INTO customer (name,address,mobile,email)
         VALUES ('{$Name}', '{$Address}',{$Mobile},'{$Email}')";
     $sql2="INSERT INTO measurement(name,chest,shoulder,waist,height) VALUES ('{$Name}',{$Chest},
@@ -84,7 +84,7 @@ include_once "connect.php";
     <input id="pant1" type="number" min="0" placeholder="Waist" name="waist"  required>
     <input id="pant2" type="number" min="0" placeholder="Height" name="height"  required>	
     <input id="pant3" type="number" min="0" placeholder="Pant Quantity" name="pquantity"  required> 
-    <input id="amount" type="number" min="0" placeholder="Amount" name="amt" required>
+    
     <input id="delivdate" type="date" placeholder="Expeceted Delivery" name="ddate" required>
     <div class="container2">
   <input id="d" type="text" name="dressname"value="" ></input>
@@ -107,7 +107,6 @@ include_once "connect.php";
   var p1=document.getElementById("pant1");
   var p2=document.getElementById("pant2");
   var p3=document.getElementById("pant3");
-  var amt=document.getElementById("amount");
   var d=document.getElementById("delivdate");
   var dressname=document.getElementById("d");
   if (s.checked && p.checked)
@@ -118,23 +117,17 @@ include_once "connect.php";
     p1.style.visibility="visible";
     p2.style.visibility="visible";
     p3.style.visibility="visible";
-    amt.style.visibility="visible";
     d.style.visibility="visible";
-    f.style.height="1040px";
+    f.style.height="980px";
     dressname.value="Shirt Pant";
   }
   else
   {
-    f.style.height="860px";
+    f.style.height="805px";
     if(s.checked){
     s1.style.visibility="visible";
     s2.style.visibility="visible";
     s3.style.visibility="visible";
-    amt.style.visibility="visible";
-    amt.style.position="absolute";
-    amt.style.bottom="140px";
-    amt.style.width="95%";
-    amt.style.left="10px";
     d.style.visibility="visible";
     d.style.position="absolute";
     d.style.bottom="80px";
@@ -150,27 +143,27 @@ include_once "connect.php";
     p1.style.position="absolute";
     p2.style.position="absolute";
     p3.style.position="absolute";
-    amt.style.position="absolute";
+    
     d.style.position="absolute";
-    p1.style.bottom="310px";
-    p2.style.bottom="250px";
-    p3.style.bottom="190px";
-    amt.style.bottom="130px";
+    p1.style.bottom="250px";
+    p2.style.bottom="190px";
+    p3.style.bottom="130px";
+    
     d.style.bottom="70px"
     p1.style.width="95%";
     p2.style.width="95%";
     p3.style.width="95%";
-    amt.style.width="95%";
+   
     d.style.width="95%";
     p1.style.left="10px";
     p2.style.left="10px";
     p3.style.left="10px";
-    amt.style.left="10px";
+   
     d.style.left="10px";
     p1.style.visibility="visible";
     p2.style.visibility="visible";
     p3.style.visibility="visible";
-    amt.style.visibility="visible";
+    
     d.style.visibility="visible";
     s1.value=0;
     s2.value=0;

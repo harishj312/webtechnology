@@ -80,7 +80,7 @@
     <label style="top:560px;" id="lbl4">HEIGHT</label>
     <input style="float:right;width:60%" id="pant2" type="number" min="0"  placeholder="Height" name="height"  value="<?php echo $row['height']?>" required>	
     <input id="pant3" type="number" placeholder="Pant Quantity" min="0"  name="pquantity"  required> 
-    <input id="amount" type="number" min="0"  placeholder="Amount"  name="amt" required>
+    
     <input id="delivdate" type="date" placeholder="Expeceted Delivery" name="ddate" required>
     <div class="container2">
   <input id="d" type="text" name="dressname"value="" ></input>
@@ -96,7 +96,7 @@
 include_once "connect.php";
 if(isset($_POST['submit1']))  {
   $Name=$_POST['name'];
-  $Amount=$_POST['amt'];
+ 
   $Date=$_POST['ddate'];
   $Chest=$_POST['chest'];
   $Shoulder=$_POST['shoulder'];
@@ -105,7 +105,7 @@ if(isset($_POST['submit1']))  {
   $Height=$_POST['height'];
   $PantQuantity=$_POST['pquantity'];
   $Dress=$_POST['dressname'];
-  
+  $Amount=($ShirtQuantity*300)+($PantQuantity*350);
   if ($Chest==0 and $Shoulder==0){
     $sql2="update measurement set waist='$_POST[waist]',height='$_POST[height]' where name='$_POST[name]' ";
   }
@@ -145,7 +145,6 @@ if(isset($_POST['submit1']))  {
   var p1=document.getElementById("pant1");
   var p2=document.getElementById("pant2");
   var p3=document.getElementById("pant3");
-  var amt=document.getElementById("amount");
   var d=document.getElementById("delivdate");
   var dressname=document.getElementById("d");
   var l1=document.getElementById("lbl1");
@@ -160,29 +159,24 @@ if(isset($_POST['submit1']))  {
     p1.style.visibility="visible";
     p2.style.visibility="visible";
     p3.style.visibility="visible";
-    amt.style.visibility="visible";
+    
     d.style.visibility="visible";
     l1.style.visibility="visible";
     l2.style.visibility="visible";
     l3.style.visibility="visible";
     l4.style.visibility="visible";
-    f.style.height="860px";
+    f.style.height="800px";
     dressname.value="Shirt Pant";
   }
   else
   {
-    f.style.height="680px";
+    f.style.height="624px";
     if(s.checked){
     s1.style.visibility="visible";
     s2.style.visibility="visible";
     s3.style.visibility="visible";
-    amt.style.visibility="visible";
     l1.style.visibility="visible";
     l2.style.visibility="visible";
-    amt.style.position="absolute";
-    amt.style.bottom="140px";
-    amt.style.width="95%";
-    amt.style.left="10px";
     d.style.visibility="visible";
     d.style.position="absolute";
     d.style.bottom="80px";
@@ -198,29 +192,24 @@ if(isset($_POST['submit1']))  {
     p1.style.position="absolute";
     p2.style.position="absolute";
     p3.style.position="absolute";
-    amt.style.position="absolute";
     d.style.position="absolute";
-    p1.style.bottom="310px";
-    p2.style.bottom="250px";
-    p3.style.bottom="190px";
-    amt.style.bottom="130px";
+    p1.style.bottom="250px";
+    p2.style.bottom="190px";
+    p3.style.bottom="130px";
     l3.style.top="323px";
     l4.style.top="383px";
     d.style.bottom="70px"
     p1.style.width="60%";
     p2.style.width="60%";
     p3.style.width="95%";
-    amt.style.width="95%";
     d.style.width="95%";
     p1.style.right="10px";
     p2.style.right="10px";
     p3.style.left="10px";
-    amt.style.left="10px";
     d.style.left="10px";
     p1.style.visibility="visible";
     p2.style.visibility="visible";
     p3.style.visibility="visible";
-    amt.style.visibility="visible";
     d.style.visibility="visible";
     l3.style.visibility="visible";
     l4.style.visibility="visible";
