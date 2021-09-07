@@ -49,7 +49,7 @@
     <input type="text" placeholder="Address" name="address" required>
     <input type="number" placeholder="Contact Number" name="cno" required>
     <input type="text" placeholder="Email" name="email" required>
-    <button  type="submit" name="submit1" >UPDATE STATUS</button> 
+    <button  type="submit" name="submit1" >UPDATE </button> 
   </div>
 </form>
 
